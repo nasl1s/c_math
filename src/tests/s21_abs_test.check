@@ -1,0 +1,43 @@
+#suite abs
+
+#test abs1
+  int x = 122;
+  ck_assert_int_eq(s21_abs(x), abs(x));
+
+#test abs2
+  int x = -122;
+  ck_assert_int_eq(s21_abs(x), abs(x));
+
+#test abs3
+  int x = 0;
+  ck_assert_int_eq(s21_abs(x), abs(x));
+
+#test abs4
+  ck_assert_int_eq(abs(-13), s21_abs(-13));
+
+#test abs5
+  ck_assert_int_eq(abs(13), s21_abs(13));
+
+#test abs6
+  ck_assert_int_eq(abs(-1000), s21_abs(-1000));
+
+#test abs7
+  ck_assert_int_eq(abs(32346234), s21_abs(32346234));
+
+#test abs8
+  ck_assert_int_eq(abs(0), s21_abs(0));
+
+#test abs9
+  ck_assert_int_eq(abs(1), s21_abs(1));
+
+#test abs10
+  ck_assert_int_eq(abs(-1), s21_abs(-1));
+
+#test abs11
+  ck_assert_int_eq(abs(1000), s21_abs(1000));
+
+#test abs12
+  ck_assert_int_eq(abs(2147483647), s21_abs(2147483647));
+
+#test abs13
+  ck_assert_int_eq(abs(-2147483646), s21_abs(-2147483646));

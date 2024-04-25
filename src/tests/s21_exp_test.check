@@ -1,0 +1,99 @@
+#suite s21_exp
+
+#test s21_exp1
+ck_assert_double_nan(s21_exp(S21_NAN));
+ck_assert_double_nan(exp(S21_NAN));
+
+#test s21_exp2
+ck_assert_ldouble_infinite(s21_exp(S21_POS_INF));
+ck_assert_ldouble_infinite(exp(S21_POS_INF));
+
+#test s21_exp3
+ck_assert_double_eq_tol(s21_exp(S21_NEG_INF), exp(S21_NEG_INF), 0.000001);
+
+#test s21_exp4
+ck_assert_double_eq_tol(s21_exp(0), exp(0), 0.000001);
+
+#test s21_exp5
+for (double i = -10; i <= 10; i += 0.1) {
+    ck_assert_double_eq_tol(s21_exp(i), exp(i), 0.000001);
+}
+
+#test s21_exp6
+  ck_assert_ldouble_eq_tol(exp(-13.54), s21_exp(-13.54), 1e-6);
+
+#test s21_exp7
+  ck_assert_ldouble_eq_tol(exp(13.54), s21_exp(13.54), 1e-6);
+
+#test s21_exp8
+  ck_assert_ldouble_eq_tol(exp(-0.54), s21_exp(-0.54), 1e-6);
+
+#test s21_exp9
+  ck_assert_ldouble_infinite(s21_exp(1000));
+  ck_assert_ldouble_infinite(exp(1000));
+
+#test s21_exp10
+  ck_assert_ldouble_eq_tol(exp(1), s21_exp(1), 1e-6);
+
+#test s21_exp11
+  ck_assert_ldouble_eq_tol(exp(2), s21_exp(2), 1e-6);
+
+#test s21_exp12
+  ck_assert_ldouble_eq_tol(exp(-1), s21_exp(-1), 1e-6);
+
+#test s21_exp13
+  ck_assert_ldouble_eq_tol(exp(0), s21_exp(0), 1e-6);
+
+#test s21_exp14
+  ck_assert_ldouble_eq_tol(exp(1.2345), s21_exp(1.2345), 1e-6);
+
+#test s21_exp15
+  ck_assert_ldouble_eq_tol(exp(1.23454656768), s21_exp(1.23454656768), 1e-6);
+
+#test s21_exp16
+  ck_assert_float_eq(exp(102.0000002), s21_exp(102.0000002));
+
+#test s21_exp17
+  ck_assert_ldouble_eq_tol(exp(0.5), s21_exp(0.5), 1e-6);
+
+#test s21_exp18
+  ck_assert_ldouble_eq_tol(exp(-0.5), s21_exp(-0.5), 1e-6);
+
+#test s21_exp19
+  ck_assert_ldouble_eq_tol(exp(0.9), s21_exp(0.9), 1e-6);
+
+#test s21_exp20
+  ck_assert_ldouble_eq_tol(exp(-0.9), s21_exp(-0.9), 1e-6);
+
+#test s21_exp21
+  ck_assert_ldouble_eq_tol(exp(1.0), s21_exp(1.0), 1e-6);
+
+#test s21_exp22
+  ck_assert_ldouble_eq_tol(exp(-1.0), s21_exp(-1.0), 1e-6);
+
+#test s21_exp23
+  ck_assert_ldouble_eq_tol(exp(3.14), s21_exp(3.14), 1e-6);
+
+#test s21_exp24
+  ck_assert_ldouble_eq_tol(exp(-3.14), s21_exp(-3.14), 1e-6);
+
+#test s21_exp25
+  ck_assert_ldouble_eq_tol(exp(6.28), s21_exp(6.28), 1e-6);
+
+#test s21_exp26
+  ck_assert_ldouble_eq_tol(exp(2.2343), s21_exp(2.2343), 1e-6);
+
+#test s21_exp27
+  ck_assert_ldouble_eq_tol(exp(0.1234), s21_exp(0.1234), 1e-6);
+
+#test s21_exp28
+  ck_assert_ldouble_eq_tol(exp(3.876543), s21_exp(3.876543), 1e-6);
+
+#test s21_exp29
+  ck_assert_float_eq(exp(25), s21_exp(25));
+
+#test s21_exp30
+  ck_assert_ldouble_eq_tol(exp(-25), s21_exp(-25), 1e-6);
+
+#test s21_exp31
+  ck_assert_ldouble_eq_tol(exp(-123), s21_exp(-123), 1e-6);

@@ -1,0 +1,77 @@
+#suite ceil
+
+#test ceil1
+  ck_assert_double_eq_tol(s21_ceil(-0.1), ceil(-0.1), 0.000001);
+
+#test ceil2
+  ck_assert_double_eq_tol(s21_ceil(-213.3), ceil(-213.3), 0.000001);
+
+#test ceil3
+  ck_assert_double_eq(s21_ceil(S21_POS_INF), ceil(S21_POS_INF));
+
+#test ceil4
+  ck_assert_double_nan(s21_ceil(S21_NAN));
+  ck_assert_double_nan(ceil(S21_NAN));
+
+#test ceil5
+  ck_assert_double_eq(s21_ceil(S21_NEG_INF), ceil(S21_NEG_INF));
+
+#test ceil6
+  ck_assert_double_eq_tol(s21_ceil(50), ceil(50), 0.000001);
+
+#test ceil7
+  ck_assert_double_eq_tol(s21_ceil(213.3), ceil(213.3), 0.000001);
+
+#test ceil8
+  ck_assert_double_eq(s21_ceil(S21_DBL_MAX +0.000001), ceil(S21_DBL_MAX +0.000001));
+
+#test ceil9
+  ck_assert_double_eq(s21_ceil(S21_DBL_MAX -0.000001), ceil(S21_DBL_MAX +0.000001));
+
+#test ceil10
+  ck_assert_double_eq_tol(s21_ceil(-50), ceil(-50), 0.000001);
+
+#test ceil11
+  ck_assert_double_eq_tol(s21_ceil(0), ceil(0), 0.000001);
+
+#test ceil12
+  ck_assert_double_eq_tol(s21_ceil(-0), ceil(-0), 0.000001);
+
+#test ceil13
+  ck_assert_ldouble_eq_tol(ceil(-13.54), s21_ceil(-13.54), 1e-6);
+
+#test ceil14
+  ck_assert_ldouble_eq_tol(ceil(13.54), s21_ceil(13.54), 1e-6);
+
+#test ceil15
+  ck_assert_ldouble_eq_tol(ceil(1000), s21_ceil(1000), 1e-6);
+
+#test ceil16
+  ck_assert_ldouble_eq_tol(ceil(102.0000002), s21_ceil(102.0000002), 1e-6);
+
+#test ceil17
+  ck_assert_ldouble_eq_tol(ceil(0.0), s21_ceil(0.0), 1e-6);
+
+#test ceil18
+  ck_assert_ldouble_eq_tol(ceil(0.5), s21_ceil(0.5), 1e-6);
+
+#test ceil19
+  ck_assert_ldouble_eq_tol(ceil(-0.5), s21_ceil(-0.5), 1e-6);
+
+#test ceil20
+  ck_assert_ldouble_eq_tol(ceil(1.0), s21_ceil(1.0), 1e-6);
+
+#test ceil21
+  ck_assert_ldouble_eq_tol(ceil(-1.0), s21_ceil(-1.0), 1e-6);
+
+#test ceil22
+  ck_assert_ldouble_eq_tol(ceil(1000), s21_ceil(1000), 1e-6);
+
+#test ceil23
+  ck_assert_ldouble_eq_tol(ceil(-1000), s21_ceil(-1000), 1e-6);
+
+#test ceil24
+  ck_assert_ldouble_eq_tol(ceil(1001), s21_ceil(1001), 1e-6);
+
+#test ceil25
+  ck_assert_ldouble_eq_tol(ceil(-1001), s21_ceil(-1001), 1e-6);

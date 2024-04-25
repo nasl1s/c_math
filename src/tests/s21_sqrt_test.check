@@ -1,0 +1,102 @@
+#suite sqrt
+
+#test sqrt1
+long double n = -100;
+ck_assert_double_nan(s21_sqrt(n));
+ck_assert_double_nan(sqrt(n));
+
+#test sqrt2
+ck_assert_double_eq_tol(s21_sqrt(100.0), sqrt(100.0), 0.000001);
+
+#test sqrt3
+long double n = 0;
+ck_assert_ldouble_eq(s21_sqrt(n), sqrt(n));
+
+#test sqrt4
+  ck_assert_ldouble_eq_tol(sqrt(0.0), s21_sqrt(0.0), 1e-6);
+
+#test sqrt5
+  ck_assert_ldouble_eq_tol(sqrt(1.0), s21_sqrt(1.0), 1e-6);
+
+#test sqrt6
+  ck_assert_ldouble_eq_tol(sqrt(6.28), s21_sqrt(6.28), 1e-6);
+
+#test sqrt7
+  ck_assert_ldouble_eq_tol(sqrt(2.2343), s21_sqrt(2.2343), 1e-6);
+
+#test sqrt8
+  long double n = -123;
+  ck_assert_double_nan(s21_sqrt(n));
+  ck_assert_double_nan(sqrt(n));
+
+#test sqrt9
+  ck_assert_ldouble_eq_tol(sqrt(0.9), s21_sqrt(0.9), 1e-6);
+
+#test sqrt10
+  ck_assert_ldouble_eq_tol(sqrt(0.5), s21_sqrt(0.5), 1e-6);
+
+#test sqrt11
+  long double n = -0.5;
+  ck_assert_double_nan(s21_sqrt(n));
+  ck_assert_double_nan(sqrt(n));
+
+#test sqrt12
+  ck_assert_ldouble_eq_tol(sqrt(0.9), s21_sqrt(0.9), 1e-6);
+
+#test sqrt13
+  long double n = -0.9;
+  ck_assert_double_nan(s21_sqrt(n));
+  ck_assert_double_nan(sqrt(n));
+
+#test sqrt14
+  ck_assert_ldouble_eq_tol(sqrt(1.0), s21_sqrt(1.0), 1e-6);
+
+#test sqrt15
+  long double n = -1;
+  ck_assert_double_nan(s21_sqrt(n));
+  ck_assert_double_nan(sqrt(n));
+
+#test sqrt16
+  ck_assert_ldouble_eq_tol(sqrt(3.14), s21_sqrt(3.14), 1e-6);
+
+#test sqrt17
+  long double n = -3.14;
+  ck_assert_double_nan(s21_sqrt(n));
+  ck_assert_double_nan(sqrt(n));
+
+#test sqrt18
+  ck_assert_ldouble_eq_tol(sqrt(0.1234), s21_sqrt(0.1234), 1e-6);
+
+#test sqrt19
+  ck_assert_ldouble_eq_tol(sqrt(3.876543), s21_sqrt(3.876543), 1e-6);
+
+#test sqrt20
+  ck_assert_ldouble_eq_tol(sqrt(21.123456), s21_sqrt(21.123456), 1e-6);
+
+#test sqrt21
+  long double n = -21.123456;
+  ck_assert_double_nan(s21_sqrt(n));
+  ck_assert_double_nan(sqrt(n));
+
+#test sqrt22
+  ck_assert_ldouble_eq_tol(sqrt(25), s21_sqrt(25), 1e-6);
+
+#test sqrt23
+  long double n = -25;
+  ck_assert_double_nan(s21_sqrt(n));
+  ck_assert_double_nan(sqrt(n));
+
+#test sqrt24
+  ck_assert_ldouble_eq_tol(sqrt(123), s21_sqrt(123), 1e-6);
+
+#test sqrt25
+  ck_assert_double_nan(sqrt(S21_NAN));
+  ck_assert_double_nan(s21_sqrt(S21_NAN));
+
+#test sqrt26
+  ck_assert_ldouble_eq(sqrt(S21_POS_INF), s21_sqrt(S21_POS_INF));
+
+#test sqrt27
+  ck_assert_double_nan(sqrt(S21_NEG_INF));
+  ck_assert_double_nan(s21_sqrt(S21_NEG_INF));
+

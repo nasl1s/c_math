@@ -1,0 +1,58 @@
+#suite asin_test  
+
+#test asin_test1
+  ck_assert_int_eq(asin(-13.54), s21_asin(-13.54));
+
+#test asin_test2
+  ck_assert_int_eq(asin(13.54), s21_asin(13.54));
+
+#test asin_test3
+  ck_assert_int_eq(asin(6.28), s21_asin(6.28));
+
+#test asin_test4
+  ck_assert_ldouble_eq_tol(asin(S21_EPS), s21_asin(S21_EPS), 1e-6);
+
+#test asin_test5
+  ck_assert_ldouble_eq_tol(asin(0.1234), s21_asin(0.1234), 1e-6);
+
+#test asin_test6
+  ck_assert_ldouble_eq_tol(asin(1), s21_asin(1), 1e-6);
+
+#test asin_test7
+  ck_assert_ldouble_eq_tol(asin(-1), s21_asin(-1), 1e-6);
+
+#test asin_test8
+  ck_assert_ldouble_eq_tol(asin(0.5), s21_asin(0.5), 1e-6);
+
+#test asin_test9
+  ck_assert_ldouble_eq_tol(asin(-0.5), s21_asin(-0.5), 1e-6);
+
+#test asin_test10
+  ck_assert_ldouble_eq_tol(asin(0.0), s21_asin(0.0), 1e-6);
+
+#test asin_test11
+  ck_assert_ldouble_eq_tol(asin(1.0), s21_asin(1.0), 1e-6);
+
+#test asin_test12
+  ck_assert_ldouble_eq_tol(asin(-1.0), s21_asin(-1.0), 1e-6);
+
+#test asin_test13
+  ck_assert_int_eq(asin(3.14), s21_asin(3.14));
+
+#test asin_test14
+  ck_assert_int_eq(asin(-3.14), s21_asin(-3.14));
+
+#test asin_test15
+  ck_assert_int_eq(asin(S21_NAN), s21_asin(S21_NAN));
+
+#test asin_test16
+  ck_assert_int_eq(asin(S21_POS_INF), s21_asin(S21_POS_INF));
+
+#test asin_test17
+  ck_assert_int_eq(asin(S21_DBL_MAX), s21_asin(S21_DBL_MAX));
+
+#test asin_test18
+  ck_assert_ldouble_eq_tol(asin(S21_DBL_MIN), s21_asin(S21_DBL_MIN), 1e-6);
+
+#test asin_test19
+  ck_assert_int_eq(asin(S21_NEG_INF), s21_asin(S21_NEG_INF));

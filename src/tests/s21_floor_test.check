@@ -1,0 +1,71 @@
+#suite floor
+
+#test floor1
+  ck_assert_double_eq_tol(s21_floor(-0.1), floor(-0.1), 0.000001);
+
+#test floor2
+  ck_assert_double_eq_tol(s21_floor(-213.3), floor(-213.3), 0.000001);
+
+#test floor3
+  ck_assert_double_eq(s21_floor(S21_POS_INF), floor(S21_POS_INF));
+
+#test floor4
+  ck_assert_double_nan(s21_floor(S21_NAN));
+  ck_assert_double_nan(floor(S21_NAN));
+
+#test floor5
+  ck_assert_double_eq(s21_floor(S21_NEG_INF), floor(S21_NEG_INF));
+
+#test floor6
+  ck_assert_double_eq_tol(s21_floor(50), floor(50), 0.000001);
+
+#test floor7
+  ck_assert_double_eq_tol(s21_floor(0), floor(0), 0.000001);
+
+#test floor8
+  ck_assert_double_eq_tol(s21_floor(-50), floor(-50), 0.000001);
+
+#test floor9
+  ck_assert_ldouble_eq_tol(floor(-13.54), s21_floor(-13.54), 1e-6);
+
+#test floor10
+  ck_assert_ldouble_eq_tol(floor(13.54), s21_floor(13.54), 1e-6);
+
+#test floor11
+  ck_assert_ldouble_eq_tol(floor(-0.54), s21_floor(-0.54), 1e-6);
+
+#test floor12
+  ck_assert_ldouble_eq_tol(floor(1000), s21_floor(1000), 1e-6);
+
+#test floor13
+  ck_assert_ldouble_eq_tol(floor(102.0000002), s21_floor(102.0000002), 1e-6);
+
+#test floor14
+  ck_assert_ldouble_eq_tol(floor(0.0), s21_floor(0.0), 1e-6);
+
+#test floor15
+  ck_assert_ldouble_eq_tol(floor(0.5), s21_floor(0.5), 1e-6);
+
+#test floor16
+  ck_assert_ldouble_eq_tol(floor(-0.5), s21_floor(-0.5), 1e-6);
+
+#test floor17
+  ck_assert_ldouble_eq_tol(floor(1.0), s21_floor(1.0), 1e-6);
+
+#test floor18
+  ck_assert_ldouble_eq_tol(floor(-1.0), s21_floor(-1.0), 1e-6);
+
+#test floor19
+  ck_assert_ldouble_eq_tol(floor(-1000), s21_floor(-1000), 1e-6);
+
+#test floor20
+  ck_assert_ldouble_eq_tol(floor(1001), s21_floor(1001), 1e-6);
+
+#test floor21
+  ck_assert_ldouble_eq_tol(floor(-1001), s21_floor(-1001), 1e-6);
+
+#test floor22
+  ck_assert_ldouble_eq(floor(S21_DBL_MAX), s21_floor(S21_DBL_MAX));
+
+#test floor23
+  ck_assert_ldouble_eq(floor(S21_DBL_MIN), s21_floor(S21_DBL_MIN));

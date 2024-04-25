@@ -1,0 +1,107 @@
+#suite pow
+
+#test pow1
+ck_assert_double_nan(s21_pow(-3, 2.5));
+ck_assert_double_nan(pow(-3, 2.5));
+
+#test pow2
+ck_assert_double_nan(s21_pow(S21_NAN, 2.5));
+ck_assert_double_nan(pow(S21_NAN, 2.5));
+
+#test pow3
+ck_assert_double_nan(s21_pow(S21_NAN, 3.6));
+ck_assert_double_nan(pow(S21_NAN, 3.6));
+
+#test pow4
+ck_assert_double_nan(s21_pow(5.5, S21_NAN));
+ck_assert_double_nan(pow(5.5, S21_NAN));
+
+#test pow5
+ck_assert_double_infinite(s21_pow(0.5, S21_NEG_INF));
+ck_assert_double_infinite(pow(0.5, S21_NEG_INF));
+
+#test pow6
+ck_assert_double_eq_tol(s21_pow(0.5, S21_POS_INF), pow(0.5, S21_POS_INF), 1e-6);
+
+#test pow7
+ck_assert_double_infinite(s21_pow(1.5, S21_POS_INF));
+ck_assert_double_infinite(pow(1.5, S21_POS_INF));
+
+#test pow8
+ck_assert_double_infinite(s21_pow(S21_NEG_INF, S21_POS_INF));
+ck_assert_double_infinite(pow(S21_NEG_INF, S21_POS_INF));
+
+#test pow9
+ck_assert_double_eq_tol(s21_pow(-1, S21_NEG_INF), pow(-1, S21_NEG_INF), 0.000001);
+
+#test pow10
+ck_assert_double_eq_tol(s21_pow(S21_NEG_INF, S21_NEG_INF), pow(S21_NEG_INF, S21_NEG_INF), 0.000001);
+
+#test pow11
+ck_assert_double_eq_tol(s21_pow(0, 3.3), pow(0, 3.3), 0.000001);
+
+#test pow12
+ck_assert_double_eq_tol(s21_pow(2, 0), pow(2, 0), 0.000001);
+
+#test pow13
+ck_assert_double_eq_tol(s21_pow(0, 0), pow(0, 0), 0.000001);
+
+#test pow14
+ck_assert_double_eq_tol(s21_pow(1, S21_NAN), pow(1, S21_NAN), 0.000001);
+
+#test pow15
+ck_assert_double_eq_tol(s21_pow(S21_NAN, 0), pow(S21_NAN, 0), 0.000001);
+
+#test pow16
+ck_assert_double_eq_tol(s21_pow(S21_NAN, 0), pow(S21_NAN, 0), 0.000001);
+
+#test pow17
+ck_assert_double_eq_tol(s21_pow(1, 1), pow(1, 1), 0.000001);
+
+#test pow18
+ck_assert_double_eq_tol(s21_pow(2, 2.2), pow(2, 2.2), 0.000001);
+
+#test pow19
+ck_assert_double_eq_tol(s21_pow(2, -2.2), pow(2, -2.2), 0.000001);
+
+#test pow20
+ck_assert_double_eq_tol(s21_pow(-2, -3), pow(-2, -3), 0.000001);
+
+#test pow21
+ck_assert_double_eq_tol(s21_pow(3, 2), pow(3, 2), 0.000001);
+
+#test pow22
+ck_assert_double_eq_tol(s21_pow(8, 9), pow(8, 9), 0.000001);
+
+#test pow23
+ck_assert_double_eq_tol(s21_pow(-2, -3), pow(-2, -3), 0.000001);
+
+#test pow24
+ck_assert_double_eq_tol(s21_pow(3, 2), pow(3, 2), 0.000001);
+
+#test pow25
+ck_assert_double_eq_tol(s21_pow(8, 9), pow(8, 9), 0.000001);
+
+#test pow26
+ck_assert_ldouble_eq_tol(pow(13.21313, 2.5), s21_pow(13.21313, 2.5), 1e-6);
+
+#test pow27
+ck_assert_float_eq(pow(32346234.21313, 2.5), s21_pow(32346234.21313, 2.5));
+
+#test pow28
+ck_assert_ldouble_eq_tol(pow(0, 2.5), s21_pow(0, 2.5), 1e-6);
+
+#test pow29
+ck_assert_ldouble_eq_tol(pow(123, -2), s21_pow(123, -2), 1e-6);
+
+#test pow30
+ck_assert_ldouble_eq_tol(pow(0.0, 1), s21_pow(0.0, 1), 1e-6);
+
+#test pow31
+ck_assert_ldouble_eq_tol(pow(2.5, 2.5), s21_pow(2.5, 2.5), 1e-6);
+
+#test pow32
+ck_assert_ldouble_eq_tol(pow(2.5, -2.5), s21_pow(2.5, -2.5), 1e-6);
+
+#test pow33
+ck_assert_ldouble_eq_tol(pow(13.21313, -2.5), s21_pow(13.21313, -2.5), 1e-6);

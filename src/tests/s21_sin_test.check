@@ -1,0 +1,76 @@
+#suite sin
+
+#test sin1
+  ck_assert_double_nan(s21_sin(S21_NAN));
+  ck_assert_double_nan(sin(S21_NAN));
+
+#test sin2
+  ck_assert_double_nan(s21_sin(S21_POS_INF));
+  ck_assert_double_nan(sin(S21_POS_INF));
+
+#test sin3
+  ck_assert_double_nan(s21_sin(S21_NEG_INF));
+  ck_assert_double_nan(sin(S21_NEG_INF));
+
+#test sin4
+  ck_assert_double_eq_tol(s21_sin(-14.96), sin(-14.96), 0.000001);
+
+#test sin5
+  ck_assert_double_eq_tol(s21_sin(0), sin(0), 0.000001);
+
+#test sin6
+  ck_assert_ldouble_eq_tol(sin(-13.54), s21_sin(-13.54), 1e-6);
+  
+#test sin7
+  ck_assert_ldouble_eq_tol(sin(13.54), s21_sin(13.54), 1e-6);
+  
+#test sin8
+  ck_assert_ldouble_eq_tol(sin(0.0), s21_sin(0.0), 1e-6);
+  
+#test sin9
+  ck_assert_ldouble_eq_tol(sin(1.0), s21_sin(1.0), 1e-6);
+  
+#test sin10
+  ck_assert_ldouble_eq_tol(sin(3.14), s21_sin(3.14), 1e-6);
+  
+#test sin11
+  ck_assert_ldouble_eq_tol(sin(6.28), s21_sin(6.28), 1e-6);
+  
+#test sin12
+  ck_assert_ldouble_eq_tol(sin(2.2343), s21_sin(2.2343), 1e-6);
+  
+#test sin13
+  ck_assert_ldouble_eq_tol(sin(0.1234), s21_sin(0.1234), 1e-6);
+  
+#test sin14
+  ck_assert_ldouble_eq_tol(sin(0.5), s21_sin(0.5), 1e-6);
+  
+#test sin15
+  ck_assert_ldouble_eq_tol(sin(-0.5), s21_sin(-0.5), 1e-6);
+  
+#test sin16
+  ck_assert_ldouble_eq_tol(sin(1.0), s21_sin(1.0), 1e-6);
+  
+#test sin17
+  ck_assert_ldouble_eq_tol(sin(-1.0), s21_sin(-1.0), 1e-6);
+  
+#test sin18
+  ck_assert_ldouble_eq_tol(sin(3.14), s21_sin(3.14), 1e-6);
+  
+#test sin19
+  ck_assert_ldouble_eq_tol(sin(6.28), s21_sin(6.28), 1e-6);
+  
+#test sin20
+  ck_assert_ldouble_eq_tol(sin(2.2343), s21_sin(2.2343), 1e-6);
+  
+#test sin21
+  ck_assert_ldouble_eq_tol(sin(0.1234), s21_sin(0.1234), 1e-6);
+  
+#test sin22
+  ck_assert_ldouble_eq_tol(sin(3.876543), s21_sin(3.876543), 1e-6);
+  
+#test sin23
+  ck_assert_ldouble_eq_tol(sin(21.123456), s21_sin(21.123456), 1e-6);
+  
+#test sin24
+  ck_assert_ldouble_eq_tol(sin(-21.123456), s21_sin(-21.123456), 1e-6);

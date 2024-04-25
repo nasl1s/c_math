@@ -1,0 +1,66 @@
+#suite acos
+
+#test acos1
+  ck_assert_double_eq(s21_acos(0), acos(0));
+
+#test acos2
+  ck_assert_double_eq_tol(s21_acos(-0.369), acos(-0.369), 0.000001);
+
+#test acos3
+  ck_assert_double_eq(s21_acos(-1), acos(-1));
+
+#test acos4
+  ck_assert_double_nan(s21_acos(S21_POS_INF));
+  ck_assert_double_nan(acos(S21_POS_INF));
+
+#test acos5
+  ck_assert_double_nan(s21_acos(S21_NAN));
+  ck_assert_double_nan(acos(S21_NAN));
+
+#test acos6
+  ck_assert_double_nan(s21_acos(S21_NEG_INF));
+  ck_assert_double_nan(acos(S21_NEG_INF));
+
+#test acos7
+  ck_assert_double_nan(s21_acos(16));
+  ck_assert_double_nan(acos(16));
+
+#test acos8
+  ck_assert_double_nan(s21_acos(-16));
+  ck_assert_double_nan(acos(-16));
+
+#test acos9
+  ck_assert_double_eq(s21_acos(1), acos(1));
+
+#test acos10
+  ck_assert_int_eq(acos(-13.54), s21_acos(-13.54));
+ 
+#test acos11
+  ck_assert_int_eq(acos(13.54), s21_acos(13.54));
+ 
+#test acos12
+  ck_assert_int_eq(acos(2.2343), s21_acos(2.2343));
+ 
+#test acos13
+  ck_assert_ldouble_eq_tol(acos(0.1234), s21_acos(0.1234), 1e-6);
+ 
+#test acos14
+  ck_assert_ldouble_eq_tol(acos(0.0), s21_acos(0.0), 1e-6);
+ 
+#test acos15
+  ck_assert_ldouble_eq_tol(acos(0.5), s21_acos(0.5), 1e-6);
+ 
+#test acos16
+  ck_assert_ldouble_eq_tol(acos(-0.5), s21_acos(-0.5), 1e-6);
+ 
+#test acos17
+  ck_assert_ldouble_eq_tol(acos(1.0), s21_acos(1.0), 1e-6);
+ 
+#test acos18
+  ck_assert_ldouble_eq_tol(acos(-1.0), s21_acos(-1.0), 1e-6);
+ 
+#test acos19
+  ck_assert_int_eq(acos(3.14), s21_acos(3.14));
+ 
+#test acos20
+  ck_assert_int_eq(acos(-3.14), s21_acos(-3.14));

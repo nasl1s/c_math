@@ -1,0 +1,60 @@
+#suite fabs
+
+#test fabs1
+  double x = 122.789;
+  ck_assert_int_eq(s21_fabs(x), fabs(x));
+
+#test fabs2
+  double x = -122.7263012090;
+  ck_assert_ldouble_eq(s21_fabs(x), fabs(x));
+
+#test fabs3
+  double x = 0;
+  ck_assert_ldouble_eq(s21_fabs(x), fabs(x));
+
+#test fabs4
+  double x = 7;
+  ck_assert_ldouble_eq(s21_fabs(x), fabs(x));
+
+#test fabs5
+  double x = -0.0;
+  ck_assert_ldouble_eq(s21_fabs(x), fabs(x));
+
+#test fabs6
+  double x = S21_NEG_INF;
+  ck_assert_ldouble_eq(s21_fabs(x), fabs(x));
+
+#test fabs7
+  ck_assert_double_nan(s21_fabs(S21_NAN));
+  ck_assert_double_nan(fabs(S21_NAN));
+
+#test fabs8
+  ck_assert_ldouble_eq_tol(fabs(-13.21313), s21_fabs(-13.21313), 1e-6);
+
+#test fabs9
+  ck_assert_ldouble_eq_tol(fabs(13.21313), s21_fabs(13.21313), 1e-6);
+
+#test fabs10
+  ck_assert_ldouble_eq_tol(fabs(-1000.21313), s21_fabs(-1000.21313), 1e-6);
+
+#test fabs11
+  ck_assert_ldouble_eq_tol(fabs(32346234.21313), s21_fabs(32346234.21313),
+                           1e-6);
+
+#test fabs12
+  ck_assert_ldouble_eq_tol(fabs(0.0), s21_fabs(0.0), 1e-6);
+
+#test fabs13
+  ck_assert_ldouble_eq_tol(fabs(1.1), s21_fabs(1.1), 1e-6);
+
+#test fabs14
+  ck_assert_ldouble_eq_tol(fabs(-1.1), s21_fabs(-1.1), 1e-6);
+
+#test fabs15
+  ck_assert_ldouble_eq_tol(fabs(2.5), s21_fabs(2.5), 1e-6);
+
+#test fabs16
+  ck_assert_ldouble_eq_tol(fabs(DBL_MAX), s21_fabs(DBL_MAX), 1e-6);
+
+#test fabs17
+  ck_assert_ldouble_eq_tol(fabs(DBL_MIN), s21_fabs(DBL_MIN), 1e-6);

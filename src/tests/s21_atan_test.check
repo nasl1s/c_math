@@ -1,0 +1,73 @@
+#suite atan_test
+
+#test atan_test1
+  long double arr[] = {14.96, -25.1235, 0.23464, 0, 1, -1};
+  for (int i = 0; i < 6; i++)
+    ck_assert_double_eq_tol(s21_atan(arr[i]), atan(arr[i]), 0.000001);
+
+#test atan_test2
+  ck_assert_double_eq(s21_atan(S21_POS_INF), atan(S21_POS_INF));
+
+#test atan_test3
+  ck_assert_double_nan(s21_atan(S21_NAN));
+  ck_assert_double_nan(atan(S21_NAN));
+
+#test atan_test4
+  ck_assert_double_eq(s21_atan(S21_NEG_INF), atan(S21_NEG_INF));
+
+#test atan_test5
+  ck_assert_ldouble_eq_tol(atan(-13.54), s21_atan(-13.54), 1e-6);
+
+#test atan_test6
+  ck_assert_ldouble_eq_tol(atan(13.54), s21_atan(13.54), 1e-6);
+
+#test atan_test7
+  ck_assert_ldouble_eq_tol(atan(3.14), s21_atan(3.14), 1e-6);
+
+#test atan_test8
+  ck_assert_ldouble_eq_tol(atan(6.28), s21_atan(6.28), 1e-6);
+
+#test atan_test9
+  ck_assert_ldouble_eq_tol(atan(2.2343), s21_atan(2.2343), 1e-6);
+
+#test atan_test10
+  ck_assert_ldouble_eq_tol(atan(0.1234), s21_atan(0.1234), 1e-6);
+
+#test atan_test11
+  ck_assert_ldouble_eq_tol(atan(0), s21_atan(0), 1e-6);
+
+#test atan_test12
+  ck_assert_ldouble_eq_tol(atan(1), s21_atan(1), 1e-6);
+
+#test atan_test13
+  ck_assert_ldouble_eq_tol(atan(3.5), s21_atan(3.5), 1e-6);
+
+#test atan_test14
+  ck_assert_ldouble_eq_tol(atan(-3.5), s21_atan(-3.5), 1e-6);
+
+#test atan_test15
+  ck_assert_ldouble_eq_tol(atan(0.0), s21_atan(0.0), 1e-6);
+
+#test atan_test16
+  ck_assert_ldouble_eq_tol(atan(0.5), s21_atan(0.5), 1e-6);
+
+#test atan_test17
+  ck_assert_ldouble_eq_tol(atan(-0.5), s21_atan(-0.5), 1e-6);
+
+#test atan_test18
+  ck_assert_ldouble_eq_tol(atan(1.0), s21_atan(1.0), 1e-6);
+
+#test atan_test19
+  ck_assert_ldouble_eq_tol(atan(-1.0), s21_atan(-1.0), 1e-6);
+
+#test atan_test20
+  ck_assert_ldouble_eq_tol(atan(-3.14), s21_atan(-3.14), 1e-6);
+
+#test atan_test21
+  ck_assert_ldouble_eq_tol(atan(3.876543), s21_atan(3.876543), 1e-6);
+
+#test atan_test22
+  ck_assert_ldouble_eq_tol(atan(21.123456), s21_atan(21.123456), 1e-6);
+
+#test atan_test23
+  ck_assert_ldouble_eq_tol(atan(-21.123456), s21_atan(-21.123456), 1e-6);

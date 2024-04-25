@@ -1,0 +1,81 @@
+#suite logTest
+
+#test logTest1
+ck_assert_int_eq(log(40), s21_log(40));
+
+#test logTest2
+ck_assert_int_eq(log(-300), s21_log(-300));
+
+#test logTest3
+ck_assert_int_eq(log(32.5), s21_log(32.5));
+
+#test logTest4
+double a = 2.83;
+ck_assert_uint_eq(s21_log(a), log(a));
+
+#test logTest5
+double a = 2;
+ck_assert_uint_eq(s21_log(a), log(a));
+
+#test logTest6
+ck_assert_uint_eq(s21_log(S21_POS_INF), log(S21_POS_INF));
+
+#test logTest7
+double a = -10;
+ck_assert_uint_eq(s21_log(a), log(a));
+
+#test logTest8
+double a = 0.25;
+ck_assert_uint_eq(s21_log(a), log(a));
+
+#test logTest9
+ck_assert_uint_eq(s21_log(S21_NAN), log(S21_NAN));
+
+#test logTest10
+double a = 0.0;
+ck_assert_uint_eq(s21_log(a), log(a));
+
+#test logTest11
+  ck_assert_int_eq(log(-13.54), s21_log(-13.54));
+
+#test logTest12
+  ck_assert_ldouble_eq_tol(log(13.54), s21_log(13.54), 1e-6);
+
+#test logTest13
+  ck_assert_ldouble_eq(log(0.0), s21_log(0.0));
+
+#test logTest14
+  ck_assert_ldouble_eq_tol(log(1.0), s21_log(1.0), 1e-6);
+
+#test logTest15
+  ck_assert_ldouble_eq_tol(log(3.14), s21_log(3.14), 1e-6);
+
+#test logTest16
+  ck_assert_ldouble_eq_tol(log(6.28), s21_log(6.28), 1e-6);
+
+#test logTest17
+  ck_assert_ldouble_eq_tol(log(2.2343), s21_log(2.2343), 1e-6);
+
+#test logTest18
+  ck_assert_ldouble_eq_tol(log(0.1234), s21_log(0.1234), 1e-6);
+
+#test logTest19
+  ck_assert_ldouble_eq_tol(log(0.5), s21_log(0.5), 1e-6);
+
+#test logTest20
+  ck_assert_int_eq(log(-0.5), s21_log(-0.5));
+
+#test logTest21
+  ck_assert_int_eq(log(-1.0), s21_log(-1.0));
+
+#test logTest22
+  ck_assert_int_eq(log(-3.14), s21_log(-3.14));
+
+#test logTest23
+  ck_assert_ldouble_eq_tol(log(3.876543), s21_log(3.876543), 1e-6);
+
+#test logTest24
+  ck_assert_ldouble_eq_tol(log(21.123456), s21_log(21.123456), 1e-6);
+
+#test logTest25
+  ck_assert_int_eq(log(-21.123456), s21_log(-21.123456));
